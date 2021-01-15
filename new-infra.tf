@@ -47,5 +47,8 @@ resource aws_ecr_repository "repository" {
   tags = {
     Name = "${local.resource_prefix.value}-repository"
   }
+  image_scanning_configuration {
+    scan_on_push = true
+  }
 
 }
