@@ -38,4 +38,11 @@ resource aws_ecr_repository "repository" {
   tags = {
     Name = "${local.resource_prefix.value}-repository"
   }
+    # provides encryption at-rest without any maintenance required
+  server_side_encryption_configuration {
+      rule {
+          apply_server_side_encryption_by_default {
+              sse_algorithm = "AES256"
+          }
+      }
   }
