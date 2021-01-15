@@ -46,3 +46,4 @@ server_side_encryption_configuration {
           }
       }
   }
+}
