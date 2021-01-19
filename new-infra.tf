@@ -29,6 +29,7 @@ resource "aws_s3_bucket" "data" {
             sse_algorithm = "AES256"
         }
     }
+  }
   tags = {
     Name        = "${local.resource_prefix.value}-data"
     Environment = local.resource_prefix.value
