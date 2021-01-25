@@ -17,7 +17,7 @@ EOF
 }
 
 # this bucket is mean to be public!
-resource "aws_s3_bucket" "data" {
+resource "aws_s3_bucket" "data" {   # noboost --> no need for encryption since this is public data
   # bucket is public
   # bucket is not encrypted
   bucket        = "${local.resource_prefix.value}-data"
