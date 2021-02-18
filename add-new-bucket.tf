@@ -29,7 +29,7 @@ resource "aws_s3_bucket" "data" {
 }
 
 
-resource aws_ecr_repository "repository" {
+resource aws_ecr_repository "repository" { # noboost
   name                 = "${local.resource_prefix.value}-repository"
   image_tag_mutability = "MUTABLE"
 
